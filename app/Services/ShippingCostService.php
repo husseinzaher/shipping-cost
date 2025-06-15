@@ -65,9 +65,9 @@ class ShippingCostService
             ->firstOrFail();
     }
 
-    private function calculateVolumetricWeight(float $l, float $w, float $h): float
+    private function calculateVolumetricWeight(float $length, float $width, float $height): float
     {
-        return ($l * $w * $h) / 5000;
+        return ($length * $width * $height) / 5000;
     }
 
     private function getChargeableWeight(float $gross, float $volumetric): float
